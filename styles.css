@@ -1,0 +1,30 @@
+body{
+    background-image: url(background.webp);
+}
+
+.container{
+    background-color: rgb(225, 207, 200);
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    padding:10px 20px;
+    border: 3px solid white;
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+li{
+    list-style: none;
+}
+
+.toDo{
+    color:white;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.checked{
+    text-decoration: line-through;
+}
