@@ -1,12 +1,13 @@
 // GLOBAL VARS ----------------
 
 var buttonClicked = document.getElementById("submit");
+var grandchildContainer = document.getElementById("childContainer");
 
 // FUNCTIONS ------------------
 
 function addToDo(){
 
-    var grandchildContainer = document.getElementById("childContainer");
+    var greatGrandchildContainer = document.createElement("div");
 
     //USER INPUT ------------------
     var inputAdded = document.getElementById("inputTaken").value;
@@ -19,36 +20,39 @@ function addToDo(){
     //Buttons
     var finishedBtn = document.createElement("button");
     finishedBtn.innerText = "Finished."
-    finishedBtn.classList.add("doneBtn");
 
     var removeBtn = document.createElement("button");
     removeBtn.innerText = "Remove."
-    removeBtn.classList.add("goneBtn");
 
     //Adding To-Do ----------------
 
     if (inputAdded===""){
         console.log("Nothing.");
+        alert("Please write something.");
     }
     else{
-        grandchildContainer.appendChild(textInside);
-        grandchildContainer.appendChild(finishedBtn);
-        grandchildContainer.appendChild(removeBtn);
+        grandchildContainer.appendChild(greatGrandchildContainer);
+        greatGrandchildContainer.appendChild(textInside);
+        greatGrandchildContainer.appendChild(finishedBtn);
+        greatGrandchildContainer.appendChild(removeBtn);
+
+        finishedBtn.addEventListener("click", finishEffect);
+        removeBtn.addEventListener("click", removeEffect);
+
     }
 
 }
 
-function finishEffect(){
-    if(finishEffect.target.tagName === toDo){
-        finishEffect.target.classList("checked");
-    }
-    else{
-        console.log("Nothing.")
-    }
+function finishEffect(event){
+    var finishTask = event.target.parentElement;
+    finishTask.classList.toggle("doneWith");
+}
+
+function removeEffect(event){
+    var removeTask = event.target.parentElement;
+    grandchildContainer.removeChild(removeTask);
 }
 
 // EVENT ----------------------
 
 buttonClicked.addEventListener("click", addToDo);
-
-finishedBtn.addEventListener("click", finishEffect);

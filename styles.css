@@ -25,6 +25,6 @@ li{
     padding: 5px;
 }
 
-.checked{
+.doneWith{
     text-decoration: line-through;
 }
