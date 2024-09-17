@@ -11,11 +11,11 @@ function addToDo(){
 
     //USER INPUT ------------------
     var inputAdded = document.getElementById("inputTaken").value;
-    var textInside = document.createElement("p");
-    textInside.innerText = inputAdded;
-    textInside.classList.add("toDo");
+    var inputPushed = document.createElement("p");
+    inputPushed.innerText = inputAdded;
+    inputPushed.classList.add("toDo");
 
-    console.log(textInside);
+    console.log(inputAdded);
 
     //Buttons
     var finishedBtn = document.createElement("button");
@@ -32,10 +32,12 @@ function addToDo(){
     }
     else{
         grandchildContainer.appendChild(greatGrandchildContainer);
-        greatGrandchildContainer.appendChild(textInside);
+        greatGrandchildContainer.appendChild(inputPushed);
         greatGrandchildContainer.appendChild(finishedBtn);
         greatGrandchildContainer.appendChild(removeBtn);
 
+
+        //EVENTS ------------------
         finishedBtn.addEventListener("click", finishEffect);
         removeBtn.addEventListener("click", removeEffect);
 
