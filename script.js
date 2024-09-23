@@ -2,13 +2,14 @@
 
 var buttonClicked = document.getElementById("submit");
 var grandchildContainer = document.getElementById("childContainer");
-    // Container for the to-list
+    // Container for the to-list--Named that cause its holding onto the grandchildren elements
 
 // FUNCTIONS ------------------
 
 function addToDo(){
 
     var greatGrandchildContainer = document.createElement("div");
+        // Container for the to-list--Named that cause its holding onto the great grandchildren elements
 
     //USER INPUT ------------------
     var inputAdded = document.getElementById("inputTaken").value;
