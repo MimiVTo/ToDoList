@@ -62,7 +62,7 @@ function finishEffect(event){
 
 function removeEffect(event){
 
-    // Gets rud if the to-do item
+    // Gets rid if the to-do item
     var removeTask = event.target.parentElement;
     grandchildContainer.removeChild(removeTask);
 }
