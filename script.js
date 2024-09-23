@@ -39,8 +39,13 @@ function addToDo(){
     }
     else{
 
-        //Appending items into the container
+        /*
+            Appending items into the grandchild container
+            It's another container inside of container but this one holds onto the to-do list-items
+        */
         grandchildContainer.appendChild(greatGrandchildContainer);
+
+        //Appending items into the great grandchild container
         greatGrandchildContainer.appendChild(inputPushed);
         greatGrandchildContainer.appendChild(finishedBtn);
         greatGrandchildContainer.appendChild(removeBtn);
